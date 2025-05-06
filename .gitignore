@@ -144,3 +144,5 @@ examples/wallet_trust_anchor/wallet_trust_anchor/settingslocal.py
 examples-docker/
 docker-compose-externalrp.yml
 *.old
+
+.DS_Store

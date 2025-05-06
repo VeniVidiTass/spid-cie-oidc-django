@@ -2,10 +2,10 @@ version: "3"
 
 services:
   trust-anchor.org:
-    image: ghcr.io/italia/spid-cie-oidc-django:latest
-    # build:
-      # context: .
-      # dockerfile: ./Dockerfile
+    #image:ghcr.io/italia/spid-cie-oidc-django:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     ports:
       - "8000:8000"
     volumes:
@@ -19,10 +19,10 @@ services:
         python3 manage.py runserver 0.0.0.0:8000"
 
   cie-provider.org:
-    image: ghcr.io/italia/spid-cie-oidc-django:latest
-    # build:
-      # context: .
-      # dockerfile: ./Dockerfile
+    #image: ghcr.io/italia/spid-cie-oidc-django:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     expose:
       - 8002
     ports:
@@ -40,10 +40,10 @@ services:
         python3 manage.py runserver 0.0.0.0:8002"
 
   relying-party.org:
-    image: ghcr.io/italia/spid-cie-oidc-django:latest
-    # build:
-      # context: .
-      # dockerfile: ./Dockerfile
+    #image:ghcr.io/italia/spid-cie-oidc-django:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     expose:
       - 8001
     ports:
@@ -61,10 +61,10 @@ services:
         python3 manage.py runserver 0.0.0.0:8001"
 
   wallet.trust-anchor.org:
-    image: ghcr.io/italia/spid-cie-oidc-django:latest
-    # build:
-      # context: .
-      # dockerfile: ./Dockerfile
+    #image:ghcr.io/italia/spid-cie-oidc-django:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     ports:
       - "8005:8005"
     volumes:
